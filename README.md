@@ -2,8 +2,9 @@ This code can be used to do file benchmark test on multiple clients using fio
 
 Pre-requisite:
 1. install fio on clients
-2. run fio in server mode (fio --server)
-3. open required port 8765 if needed
+2. mount hammerspace share
+3. run fio in server mode (fio --server)
+4. open required port 8765 in firewall if needed
 
 How to run:
 python3 nfs_fio_bench.py --mount <testing_path> --clients <clientname or ip address>, --sheet-id <google sheet id> --creds <credential for accessing google sheet> --run <no. of run> --bs <block_size> --iodepth <iodepth> --numjubs <no. of jobs> --size <file_size> --runtime <runtime in seconds> --ramp_time <ramp_time in seconds>
